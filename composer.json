@@ -1,0 +1,19 @@
+{
+    "name": "php-http-status",
+    "type": "library",
+    "description": "Utility to interact with HTTP status code.",    
+    "keywords": ["php","http status code"],
+    "homepage": "https://github.com/wyixin/php-http-status",
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "yixin",
+            "email": "single.w.1992@gmail.com",
+            "homepage": "http://ydev.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },    
+}

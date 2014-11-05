@@ -1,5 +1,5 @@
 {
-    "name": "php-http-status/http",
+    "name": "php-http-status/httpstatuscode",
     "type": "library",
     "description": "Utility to interact with HTTP status code.",    
     "keywords": ["php","http status code"],

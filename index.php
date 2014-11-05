@@ -14,7 +14,7 @@
 |  509     |
 |  512-599 |
 ***********/
-$http_status = array(
+$statusCode = array(
     // 1xx: Informational - Request received, continuing process
     100 => "Continue",                       // [RFC7231, Section 6.2.1]
     101 => "Switching Protocols",            // [RFC7231, Section 6.2.2]

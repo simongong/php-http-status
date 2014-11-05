@@ -1,4 +1,5 @@
 # php-http-status
+[![Build Status](https://travis-ci.org/wyixin/php-http-status.svg)](https://travis-ci.org/wyixin/php-http-status)
 
 Utility to interact with HTTP status code.
 

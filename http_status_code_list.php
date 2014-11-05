@@ -83,5 +83,3 @@ return array(
     510 => "Not Extended",                   // [RFC2774]
     511 => "Network Authentication Required" // [RFC6585]
 );
-
-print_r($http_status);

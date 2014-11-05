@@ -1,7 +1,32 @@
 <?php
 
-$status_code = require "http_status_code_list.php";
+function parse($file) {
+    $result = array();
+    $file = file_get_contents($file);
+    $rows = explode("\n", $file);
+    $code_array = array_slice($rows, 38, 69);
+    foreach($code_array as $line) {
+        $line = preg_replace('/\[.*\]/', ' ', $line); 
+        $line = preg_replace('/\s\s+/', ' ', trim($line));
+        $parts = explode(' ', $line);
+        if(end($parts) !== "Unassigned") {
+            $k = array_shift($parts);
+            $v = implode(' ', $parts);
+            if($v == "(Unused)")
+                $v = "Unused";
+            $result[$k] = $v;
+        }
+    }
+    return $result;
+}
 
+if(!file_exists("tmp")) {
+    $code_array = parse("http-status-codes.txt");
+    file_put_contents("tmp", serialize($code_array));
+}
+
+//$status_code = require "http_status_code_list.php";
+$status_code = unserialize(file_get_contents("tmp"));
 $namespace_str = "namespace HTTP {";
 
 foreach($status_code as $k => $v){
@@ -17,5 +42,4 @@ foreach($status_code as $k => $v){
 }
 
 $namespace_str .= "}";
-
 eval($namespace_str);

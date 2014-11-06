@@ -20,13 +20,17 @@ function parse($file) {
     return $result;
 }
 
-if(!file_exists("tmp")) {
-    $code_array = parse("http-status-codes.txt");
-    file_put_contents("tmp", serialize($code_array));
+$base_dir = __DIR__.'/../../';
+$tmp_file = $base_dir."data/tmp";
+$status_code_file = $base_dir."data/http-status-codes.txt";
+
+if(!file_exists($tmp_file)) {
+    $code_array = parse($status_code_file);
+    file_put_contents($tmp_file, serialize($code_array));
 }
 
 //$status_code = require "http_status_code_list.php";
-$status_code = unserialize(file_get_contents("tmp"));
+$status_code = unserialize(file_get_contents($tmp_file));
 $namespace_str = "namespace HTTP {";
 
 foreach($status_code as $k => $v){

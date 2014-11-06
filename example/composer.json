@@ -1,0 +1,5 @@
+{
+    "require": {
+        "php-http-status/httpstatuscode": "dev-master"
+    }
+}

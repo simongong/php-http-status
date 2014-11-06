@@ -31,7 +31,7 @@ if(!file_exists($tmp_file)) {
 
 //$status_code = require "http_status_code_list.php";
 $status_code = unserialize(file_get_contents($tmp_file));
-$namespace_str = "namespace HTTP {";
+$namespace_str = "namespace HTTP { class Http{};";
 
 foreach($status_code as $k => $v){
     // const "_Continue" = 100;

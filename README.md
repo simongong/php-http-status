@@ -5,5 +5,5 @@ Utility to interact with HTTP status code.
 
 ## TODO
 * sample code
-* intergrate with travis-ci & composer
-* parse & generate status-code list
+* setup github hook to update composer package automatic
+* figure out a way to autoload file under namespace, without new an object

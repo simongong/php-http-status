@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__."/../src/Http/http.php";
+require __DIR__."/../src/Http/index.php";
 
 class HttpStatusCodeTest extends PHPUnit_Framework_TestCase {
 

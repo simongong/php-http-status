@@ -28,7 +28,7 @@ composer install
 ## GETTING STARTED
 ```
 <?php
-require __DIR__."src/Http/index.php";
+require "src/Http/index.php";
 ```
 or
 ```

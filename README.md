@@ -3,6 +3,54 @@
 
 Utility to interact with HTTP status code.
 
+## GETTING THE CODE
+
+### Github
+```
+git clone git@github.com:wyixin/php-http-status.git
+```
+
+### Composer
+composer.json: Project Setup
+```
+{
+    "require": {
+        "php-http-status/httpstatuscode": "dev-master"
+    }
+}
+```
+
+Install
+```
+composer install
+```
+
+## GETTING STARTED
+```
+<?php
+require __DIR__."src/Http/index.php";
+```
+or
+```
+<?php
+require 'vendor/autoload.php';
+```
+
+## USAGE
+test.php
+```
+var_dump(Http\_Continue);
+var_dump(Http\_Switching_Protocols);
+var_dump(Http\Switching_Protocols);
+var_dump(Http\Ok);
+```
+
+## RUN TESTS
+use phpunit
+```
+phpunit tests
+```
+
 ## TODO
-* sample code
 * setup github hook to update composer package automatic
+* update version to 1.0

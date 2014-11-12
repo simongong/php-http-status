@@ -52,5 +52,4 @@ phpunit tests
 ```
 
 ## TODO
-* setup github hook to update composer package automatic
-* update version to 1.0
+* setup github hook to update composer package automatic test
